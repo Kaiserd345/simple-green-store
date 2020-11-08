@@ -40,11 +40,15 @@ body {
     z-index: -2;
     transform-origin: center;
     transition: transform .4s linear;
-    transform: perspective(800px) rotateX(5deg) scale(1.1);
+    transform: perspective(900px) rotateX(-11deg) scale(1.1);
     //need to add bg-img for sections where it used
   }
 
+}
 
+.section-title {
+  font-size: 45px;
+  font-weight: 600;
 }
 
 
@@ -105,7 +109,7 @@ body {
 //Section intro
 .intro {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   //min-width: 100vw;
   grid-template-columns: 1fr 2fr;
 
@@ -147,9 +151,36 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: all ease 0.4s;
+
     &:hover {
       background-color: darken(@green-accent, 4%);
       color: darken(@text-light, 3%);
     }
+  }
+}
+
+//About Section
+.about {
+  grid-template-columns: 1fr 1fr;
+  &-image {
+    position: relative;
+    overflow: hidden;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(86, 181, 108, .3);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &-content {
+    grid-column: 2;
+    align-items: center;
+    padding: @gutter calc(@gutter * 2) ;
   }
 }
