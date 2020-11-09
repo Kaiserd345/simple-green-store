@@ -1,3 +1,13 @@
 $(document).ready(function() {
-    // $('body').hide()
+    window.onscroll = function () {stickyHeader()};
+    let headerTop = document.querySelector(".header");
+    let sticky = headerTop.offsetTop;
+
+    function stickyHeader() {
+        if (window.pageYOffset >= 60) {
+            headerTop.classList.add("header-sticky");
+        } else {
+            headerTop.classList.remove("header-sticky")
+        }
+    }
 })
