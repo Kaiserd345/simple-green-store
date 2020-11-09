@@ -4,7 +4,7 @@ $(document).ready(function() {
     let sticky = headerTop.offsetTop;
 
     function stickyHeader() {
-        if (window.pageYOffset >= 60) {
+        if (window.pageYOffset >= 150) {
             headerTop.classList.add("header-sticky");
         } else {
             headerTop.classList.remove("header-sticky")

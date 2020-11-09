@@ -28,7 +28,7 @@ body {
 }
 
 .section {
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 }
 
 .parallax {
@@ -91,7 +91,7 @@ body {
   background-color: @bg-light;
   box-shadow: 0 1px 5px 0 rgba(82, 82, 82, 1);
   transition: top .3s ease;
-  z-index: 2;
+  z-index: 5;
 
   &-sticky {
     position: fixed;
@@ -202,12 +202,18 @@ body {
 //Brands Section
 .brands {
   position: relative;
-  min-height: 400px;
+  min-height: 550px;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 
+  &-text {
+    text-align: center;
+    color: @text-light;
+    font-size: 22px;
+
+  }
 
   &:before {
     content: '';
@@ -246,7 +252,7 @@ body {
   }
 }
 
-//Map Section
+//Stores Map Section
 .stores {
   &-container {
     grid-template-columns: 1fr 1fr;
@@ -271,6 +277,7 @@ body {
       color: @green-accent;
       text-decoration: none;
       cursor: pointer;
+      padding-left: @gutter;
 
       &:hover {
         color: darken(@green-accent, 4%);
