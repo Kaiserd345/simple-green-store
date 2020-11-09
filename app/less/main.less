@@ -22,6 +22,11 @@ body {
   display: grid;
 }
 
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
 .parallax {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -162,25 +167,66 @@ body {
 //About Section
 .about {
   grid-template-columns: 1fr 1fr;
+
   &-image {
     position: relative;
     overflow: hidden;
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(86, 181, 108, .3);
-    }
+    margin: @gutter;
+
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
+
   &-content {
     grid-column: 2;
     align-items: center;
-    padding: @gutter calc(@gutter * 2) ;
+    padding: @gutter calc(@gutter * 2);
+  }
+}
+
+//Brands Section
+.brands {
+  position: relative;
+  min-height: 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: @bg-dark;
+    opacity: .61;
+  }
+
+  &-content {
+    z-index: 2;
+    margin-top: calc(@gutter * 4);
+  }
+
+  &-title {
+    text-align: center;
+    color: @text-light;
+  }
+
+  &-list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: @gutter;
+
+    &-item {
+      text-align: center;
+      align-self: center;
+
+      &-logo {
+        max-width: 100%;
+      }
+    }
+
   }
 }
