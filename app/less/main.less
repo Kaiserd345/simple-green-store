@@ -191,11 +191,12 @@ body {
 //Brands Section
 .brands {
   position: relative;
-  min-height: 500px;
+  min-height: 400px;
   background-position: center;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+
 
   &:before {
     content: '';
@@ -263,6 +264,63 @@ body {
       &:hover {
         color: darken(@green-accent, 4%);
       }
+    }
+  }
+}
+
+//Product Way section
+.way {
+  position: relative;
+  text-align: center;
+
+  &-separator {
+    position: absolute;
+    content: "";
+    top: 35%;
+    width: 100%;
+    height: 1px;
+    z-index: -1;
+    border-bottom: 2px dashed @green-accent;
+  }
+
+  &-container {
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: @gutter-dbl;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: -70px;
+      height: 50px;
+      width: 80px;
+      background-image: url('../images/dest/logoSG.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:after {
+      content: "\f004";
+      position: absolute;
+      top: 28%;
+      right: -60px;
+      height: 50px;
+      width: 80px;
+      color: @green-accent;
+      font-family: "Font Awesome 5 Free";
+      font-size: 30px;
+    }
+  }
+
+  &-item {
+
+    &-img {
+      justify-self: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-position: center;
     }
   }
 }
