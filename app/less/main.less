@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  //overflow-x: hidden;
 }
 
 .flex {
@@ -62,8 +63,8 @@ body {
 
 //Logo
 .company-logo {
-  padding: @gutter;
-  width: 100px;
+  padding: @gutter-dbl @gutter @gutter @gutter;
+  width: 150px;
 
   .logo-link {
     color: @text-black;
@@ -186,6 +187,8 @@ body {
     position: relative;
     overflow: hidden;
     margin: @gutter;
+    max-height: 480px;
+    border-radius: 15px;
 
     img {
       width: 100%;
@@ -199,6 +202,88 @@ body {
   }
 }
 
+//Products Section
+.products {
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+
+  &-text {
+    align-items: center;
+    padding: @gutter @gutter-dbl;
+  }
+
+  &-content {
+    grid-template-rows: 90px 1fr;
+    &-categories {
+      display: flex;
+      min-width: 100%;
+      max-height: 80px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      align-items: center;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      &-button {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        padding: 0 30px ;
+        cursor: pointer;
+        vertical-align: middle;
+        height: 80px;
+        min-width: 250px;
+        text-align: center;
+        outline: none;
+
+        &:before {
+          content: "\f061";
+          position: absolute;
+          top: 30px;
+          right: 0;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: @green-accent;
+        }
+
+        &:last-child {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-list {
+      display: flex;
+      min-width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      &-item {
+        position: relative;
+        width: 230px;
+        margin-right: @gutter-dbl;
+
+        &-img {
+          height: 375px;
+          border-radius: 15px;
+          overflow: hidden;
+          img {
+            height: 100%;
+          }
+        }
+        &-label {
+          text-align: center;
+          padding: @gutter;
+        }
+      }
+    }
+  }
+}
+
 //Brands Section
 .brands {
   position: relative;
@@ -208,11 +293,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
+  &-title {
+    text-align: center;
+    color: @text-light;
+  }
+
   &-text {
     text-align: center;
     color: @text-light;
     font-size: 22px;
-
   }
 
   &:before {
@@ -223,17 +312,12 @@ body {
     bottom: 0;
     right: 0;
     background-color: @bg-dark;
-    opacity: .61;
+    opacity: .34;
   }
 
   &-content {
     z-index: 2;
     margin-top: calc(@gutter * 4);
-  }
-
-  &-title {
-    text-align: center;
-    color: @text-light;
   }
 
   &-list {
@@ -245,7 +329,7 @@ body {
       align-self: center;
 
       &-logo {
-        max-width: 100%;
+        max-width: 200px;
       }
     }
 
@@ -313,7 +397,7 @@ body {
       left: -70px;
       height: 50px;
       width: 80px;
-      background-image: url('../images/dest/logoSG.svg');
+      background-image: url('../images/dest/logo.svg');
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -347,11 +431,13 @@ body {
 .footer {
   background-color: @bg-dark;
   color: @text-light;
+
   &-container {
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
+
   &-rights {
     text-align: center;
     background-color: black;
@@ -363,14 +449,17 @@ body {
 .social-links {
   &-list {
     list-style: none;
+
     &-item {
       display: inline-block;
+
       a {
         font-size: 22px;
         color: @text-light;
         text-decoration: none;
         padding: 8px;
         cursor: pointer;
+
         &:hover {
           color: darken(@text-light, 10%);
         }

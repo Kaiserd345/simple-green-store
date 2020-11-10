@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+          integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.min.css">
     <title>Simple Green Store</title>
 </head>
 <body>
 <header class="header">
-    <div class="company-logo"><img class="company-logo-img" src="./images/dest/logoSG.svg" alt="LogoSG"></div>
+    <div class="company-logo"><img class="company-logo-img" src="./images/dest/logo.svg" alt="LogoSG"></div>
     <nav class="header-nav">
         <ul class="header-nav-list">
             <li class="header-nav-list-item"><a href="#" class="header-nav-list-link">Главная</a></li>
@@ -45,17 +46,68 @@
             <p class="about-text">С Simple Green это становится проще!</p>
         </div>
     </section>
-    <section class="products">
-
+    <section class="products grid section">
+        <div class="products-text">
+            <h2 class="products-title section-title">Ваш новый универсальный магазин</h2>
+            <p class="products-paragraph">От органических продуктов для вашего стола до природной красоты и чистого
+                дома</p>
+        </div>
+        <div class="products-content grid">
+            <div class="products-content-categories">
+                <button class="products-content-categories-button">Злаки, бобы, орехи</button>
+                <button class="products-content-categories-button">Натуральные сладости и пасты</button>
+                <button class="products-content-categories-button">Продукты из сои, масла и специи</button>
+                <button class="products-content-categories-button">Безалкогольные напитки</button>
+                <button class="products-content-categories-button">Натуральные средства гигиены</button>
+                <button class="products-content-categories-button">Натуральная косметика</button>
+                <button class="products-content-categories-button">Эко средства для дома</button>
+                <button class="products-content-categories-button">Аюрведа и благовония</button>
+            </div>
+            <div class="products-content-list">
+                <div class="products-content-list-item">
+                    <div class="products-content-list-item-img"><img src="./images/dest/categories/cat1-1.jpg" alt=""></div>
+                    <div class="products-content-list-item-label">
+                        <p>Зерновые, бобовые, семена, орехи</p>
+                    </div>
+                </div>
+                <div class="products-content-list-item">
+                    <div class="products-content-list-item-img"><img src="./images/dest/categories/cat1-2.png" alt=""></div>
+                    <div class="products-content-list-item-label">
+                        <p>Клетчатка, отруби, безглютеновая мука и смеси</p>
+                    </div>
+                </div>
+                <div class="products-content-list-item">
+                    <div class="products-content-list-item-img"><img src="./images/dest/categories/cat1-3.jpg" alt=""></div>
+                    <div class="products-content-list-item-label">
+                        <p>Хлеб на закваске, хлебцы из полбы</p>
+                    </div>
+                </div>
+                <div class="products-content-list-item">
+                    <div class="products-content-list-item-img"><img src="./images/dest/categories/cat1-4.jpg" alt=""></div>
+                    <div class="products-content-list-item-label">
+                        <p>Макароны, лапша</p>
+                    </div>
+                </div>
+                <div class="products-content-list-item">
+                    <div class="products-content-list-item-img"><img src="./images/dest/categories/cat1-5.jpg" alt=""></div>
+                    <div class="products-content-list-item-label">
+                        <p>Кэроб, какао и производные продукты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="brands grid section" style="background-image: url('./images/dest/brands.jpg')">
+    <section class="brands grid" style="background-image: url('./images/dest/brands.jpg')">
         <div class="brands-content container">
             <h2 class="brands-title section-title">Мы бережно выбираем продукты для Вас:</h2>
-            <p class="brands-text">От сердца ❤️ к солнцу ☀️</p>
+            <p class="brands-text">От сердца, к сердцу ❤️</p>
             <div class="brands-list grid">
-                <div class="brands-list-item"><img src="./images/dest/brands1.svg" alt="" class="brands-list-item-logo"></div>
-                <div class="brands-list-item"><img src="./images/dest/brands2.svg" alt="" class="brands-list-item-logo"></div>
-                <div class="brands-list-item"><img src="./images/dest/brands3.svg" alt="" class="brands-list-item-logo"></div>
+                <div class="brands-list-item"><img src="./images/dest/brands1.png" alt="" class="brands-list-item-logo">
+                </div>
+                <div class="brands-list-item"><img src="./images/dest/brands2.png" alt="" class="brands-list-item-logo">
+                </div>
+                <div class="brands-list-item"><img src="./images/dest/brands3.png" alt="" class="brands-list-item-logo">
+                </div>
             </div>
         </div>
     </section>
@@ -87,11 +139,15 @@
     <section class="stores">
         <div class="stores-container grid">
             <div class="stores-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.052635044102!2d27.65000711573933!3d53.930808738472535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDU1JzUwLjkiTiAyN8KwMzknMDcuOSJF!5e0!3m2!1sen!2sua!4v1604925654699!5m2!1sen!2sua" width="100%" height="510" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.052635044102!2d27.65000711573933!3d53.930808738472535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDU1JzUwLjkiTiAyN8KwMzknMDcuOSJF!5e0!3m2!1sen!2sua!4v1604925654699!5m2!1sen!2sua"
+                        width="100%" height="510" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="stores-text">
                 <h2 class="stores-title section-title">Мы на карте:</h2>
-                <p class="stores-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, beatae dignissimos distinctio ea enim eveniet expedita harum impedit in, minus molestias, nam nemo perferendis perspiciatis sed similique vero. Perferendis, possimus?</p>
+                <p class="stores-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, beatae
+                    dignissimos distinctio ea enim eveniet expedita harum impedit in, minus molestias, nam nemo
+                    perferendis perspiciatis sed similique vero. Perferendis, possimus?</p>
                 <h4 class="stores-text-sub-title">Адрес:</h4>
                 <p class="stores-location">ЖК Маяк Минска, ул. Петра Мстиславца 8, помещение 377, Минск</p>
                 <h4 class="stores-text-sub-title">Телефон:</h4>
@@ -107,7 +163,7 @@
 </main>
 <footer class="footer">
     <div class="footer-container container flex">
-        <div class="company-logo"><img class="company-logo-img" src="./images/dest/logoSG.svg" alt="LogoSG"></div>
+        <div class="company-logo"><img class="company-logo-img" src="./images/dest/logo.svg" alt="LogoSG"></div>
         <div class="social-links">
             <ul class="social-links-list">
                 <li class="social-links-list-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
