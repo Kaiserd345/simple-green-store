@@ -204,7 +204,7 @@ body {
 
 //Products Section
 .products {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.7fr 2.3fr;
   height: 80vh;
 
   &-text {
@@ -214,6 +214,19 @@ body {
 
   &-content {
     grid-template-rows: 90px 1fr;
+
+    .cat-tab {
+      display: none;
+    }
+    .products-content-categories-button.is-active {
+      color: @green-accent;
+      font-weight: 600;
+    }
+
+    .cat-tab.is-active {
+        display: flex;
+    }
+
     &-categories {
       display: flex;
       min-width: 100%;
@@ -230,13 +243,15 @@ body {
         position: relative;
         background-color: transparent;
         border: none;
-        padding: 0 30px ;
+        padding: 0 30px;
         cursor: pointer;
         vertical-align: middle;
         height: 80px;
         min-width: 250px;
         text-align: center;
         outline: none;
+        transition: color .5s ease;
+
 
         &:before {
           content: "\f061";
@@ -253,11 +268,14 @@ body {
             display: none;
           }
         }
+
+        &:first-child {
+          padding-left: 0;
+        }
       }
     }
 
     &-list {
-      display: flex;
       min-width: 100%;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -271,14 +289,20 @@ body {
           height: 375px;
           border-radius: 15px;
           overflow: hidden;
+
           img {
             height: 100%;
           }
         }
+
         &-label {
           text-align: center;
           padding: @gutter;
         }
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
       }
     }
   }
@@ -394,7 +418,7 @@ body {
       content: "";
       position: absolute;
       top: 25%;
-      left: -70px;
+      left: -85px;
       height: 50px;
       width: 80px;
       background-image: url('../images/dest/logo.svg');
@@ -429,7 +453,7 @@ body {
 
 //Footer
 .footer {
-  background-color: @bg-dark;
+  background-color: @bg-light;
   color: @text-light;
 
   &-container {
@@ -455,15 +479,16 @@ body {
 
       a {
         font-size: 22px;
-        color: @text-light;
+        color: @text-black;
         text-decoration: none;
         padding: 8px;
         cursor: pointer;
 
         &:hover {
-          color: darken(@text-light, 10%);
+          color: lighten(@text-black, 20%);
         }
       }
     }
   }
 }
+
