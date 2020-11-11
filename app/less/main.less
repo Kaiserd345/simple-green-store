@@ -12,9 +12,9 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  //overflow-x: hidden;
 }
 
+//Common
 .flex {
   display: flex;
 }
@@ -28,10 +28,35 @@ body {
   margin: 0 auto;
 }
 
+.button {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all ease 0.4s;
+}
+
+.delivery-button {
+  background-color: @green-accent;
+  padding: @gutter @gutter-dbl;
+  color: @text-light;
+  font-weight: 600;
+  &:hover {
+    background-color: darken(@green-accent, 4%);
+  }
+}
+
 .section {
   margin-bottom: 65px;
 }
 
+.section-title {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: @gutter;
+}
+
+//Parallax
 .parallax {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -54,11 +79,6 @@ body {
     //need to add bg-img for sections where it used
   }
 
-}
-
-.section-title {
-  font-size: 45px;
-  font-weight: 600;
 }
 
 //Logo
@@ -85,7 +105,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: -8vh;
+  top: -12vh;
   left: 0;
   width: 100%;
   height: 8vh;
@@ -115,6 +135,7 @@ body {
         padding: @gutter calc(@gutter + 10px);
         color: @text-black;
         text-decoration: none;
+        text-transform: uppercase;
         font-size: 18px;
         font-weight: 500;
         transition: color ease .4s;
@@ -124,6 +145,10 @@ body {
         }
       }
     }
+  }
+
+  &-delivery {
+    margin-right: @gutter;
   }
 }
 
@@ -145,13 +170,14 @@ body {
   }
 
   &-logo {
-    width: 150px;
-    margin-bottom: 60px;
+    width: 50%;
+    margin-top: @gutter;
   }
 
   &-title {
     font-size: 64px;
     line-height: 1.1;
+    margin-top: @gutter-dbl;
   }
 
   &-text {
@@ -159,18 +185,13 @@ body {
   }
 
   &-button {
-    display: block;
     padding: @gutter calc(@gutter + 20px);
     margin-top: 45px;
     max-width: 50%;
     font-size: 20px;
     font-weight: 600;
-    text-align: center;
     color: @text-light;
     background-color: @green-accent;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all ease 0.4s;
 
     &:hover {
       background-color: darken(@green-accent, 4%);
@@ -204,36 +225,35 @@ body {
 
 //Products Section
 .products {
-  grid-template-columns: 0.7fr 2.3fr;
-  height: 80vh;
+  grid-template-rows: 0.7fr 2.3fr;
 
   &-text {
     align-items: center;
     padding: @gutter @gutter-dbl;
+    text-align: center;
   }
 
   &-content {
-    grid-template-rows: 90px 1fr;
+    grid-template-columns: 0.7fr 2.3fr;
+    padding: @gutter 0;
 
     .cat-tab {
       display: none;
     }
+
     .products-content-categories-button.is-active {
       color: @green-accent;
       font-weight: 600;
+      border-left: 3px solid @green-accent;
     }
 
     .cat-tab.is-active {
-        display: flex;
+      display: flex;
     }
 
     &-categories {
       display: flex;
-      min-width: 100%;
-      max-height: 80px;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      align-items: center;
+      flex-direction: column;
 
       &::-webkit-scrollbar {
         width: 0;
@@ -243,35 +263,16 @@ body {
         position: relative;
         background-color: transparent;
         border: none;
-        padding: 0 30px;
+        padding: 0 @gutter-dbl;
+        max-width: 90%;
         cursor: pointer;
         vertical-align: middle;
-        height: 80px;
-        min-width: 250px;
-        text-align: center;
+        height: 50px;
+        text-align: left;
+        font-size: 16px;
         outline: none;
         transition: color .5s ease;
 
-
-        &:before {
-          content: "\f061";
-          position: absolute;
-          top: 30px;
-          right: 0;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          color: @green-accent;
-        }
-
-        &:last-child {
-          &:before {
-            display: none;
-          }
-        }
-
-        &:first-child {
-          padding-left: 0;
-        }
       }
     }
 
@@ -407,6 +408,10 @@ body {
     height: 1px;
     z-index: -1;
     border-bottom: 2px dashed @green-accent;
+  }
+
+  &-title {
+    margin-bottom: @gutter-dbl;
   }
 
   &-container {
