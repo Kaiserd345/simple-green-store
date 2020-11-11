@@ -41,6 +41,7 @@ body {
   padding: @gutter @gutter-dbl;
   color: @text-light;
   font-weight: 600;
+
   &:hover {
     background-color: darken(@green-accent, 4%);
   }
@@ -453,6 +454,11 @@ body {
       height: 180px;
       border-radius: 50%;
       background-position: center;
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

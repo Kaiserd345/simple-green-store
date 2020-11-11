@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     tabToggle();
 
-    //Smooth Scroll
+    //Smooth Scroll to Links
     const anchors = document.querySelectorAll('a[href*="#"]')
 
     for (let anchor of anchors) {
