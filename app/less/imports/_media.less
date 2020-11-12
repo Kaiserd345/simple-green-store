@@ -1,5 +1,56 @@
 @import "_var";
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1280px) {
+  .way {
+    &-container {
+      grid-template-columns: 1fr 1fr;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+
+    &-separator {
+      display: none;
+    }
+
+  }
+}
+
+@media only screen and (max-device-width: 960px) {
+  .way {
+    &-container {
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 670px) {
+  body {
+    font-size: 35px;
+  }
+
+  .intro {
+    height: auto;
+    grid-template-columns: 1fr;
+    &:before {
+      background: @bg-brown;
+    }
+    &-logo {
+      width: 30%;
+    }
+    &-vertical {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
 
 }

@@ -7,7 +7,7 @@ body {
   //  .font-montserrat;
   //}
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,11 +21,6 @@ body {
 
 .grid {
   display: grid;
-}
-
-.container {
-  width: 1080px;
-  margin: 0 auto;
 }
 
 .button {
@@ -52,7 +47,7 @@ body {
 }
 
 .section-title {
-  font-size: 45px;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: @gutter;
 }
@@ -76,7 +71,7 @@ body {
     z-index: -2;
     transform-origin: center;
     transition: transform .4s linear;
-    transform: perspective(900px) rotateX(-11deg) scale(1.1);
+    transform: perspective(900px) rotateX(-7deg) scale(1.1);
     //need to add bg-img for sections where it used
   }
 
@@ -137,7 +132,6 @@ body {
         color: @text-black;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 15px;
         font-weight: 500;
         transition: color ease .4s;
 
@@ -156,7 +150,7 @@ body {
 //Section intro
 .intro {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-columns: 1fr 2fr;
 
   &:before {
@@ -167,29 +161,30 @@ body {
   &-content {
     position: relative;
     padding: @gutter 0 0 calc(@gutter + 45px);
-    justify-items: center;
+    height: 100%;
+    grid-template-rows: 0.7fr 2.3fr;
   }
 
   &-logo {
     width: 50%;
     margin-top: @gutter;
   }
-
   &-title {
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 1.1;
     margin-top: @gutter-dbl;
   }
 
   &-text {
-    font-size: 20px;
+    font-size: 1.5em;
   }
 
   &-button {
     padding: @gutter calc(@gutter + 20px);
-    margin-top: 45px;
-    max-width: 50%;
-    font-size: 20px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 80%;
+    font-size: 1.5em;
     font-weight: 600;
     color: @text-light;
     background-color: @green-accent;
@@ -270,7 +265,6 @@ body {
         vertical-align: middle;
         height: 50px;
         text-align: left;
-        font-size: 16px;
         outline: none;
         transition: color .5s ease;
 
@@ -313,7 +307,6 @@ body {
 //Brands Section
 .brands {
   position: relative;
-  //min-height: 550px;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -327,7 +320,7 @@ body {
   &-text {
     text-align: center;
     color: @text-light;
-    font-size: 22px;
+    font-size: 1.5em;
   }
 
   &:before {
@@ -379,7 +372,7 @@ body {
     padding: @gutter @gutter-dbl;
 
     &-sub-title {
-      font-size: 24px;
+      font-size: 1.6em;
       margin-bottom: @gutter;
     }
 
@@ -421,6 +414,8 @@ body {
     position: relative;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: @gutter-dbl;
+    width: 992px;
+    margin: 0 auto;
 
     &:before {
       content: "";
@@ -443,7 +438,7 @@ body {
       width: 80px;
       color: @green-accent;
       font-family: "Font Awesome 5 Free";
-      font-size: 30px;
+      font-size: 2em;
     }
   }
 
@@ -491,7 +486,7 @@ body {
       display: inline-block;
 
       a {
-        font-size: 22px;
+        font-size: 1.5em;
         color: @text-black;
         text-decoration: none;
         padding: 8px;
@@ -505,3 +500,4 @@ body {
   }
 }
 
+@import "imports/_media";
