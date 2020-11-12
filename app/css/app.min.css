@@ -690,4 +690,18 @@ body {
     height: auto;
     width: 100%
   }
+  .way-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr
+  }
+  .way-item-img {
+    width: 50vw;
+    height: 50vw;
+    background-size: cover
+  }
+  .way-item-caption {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    width: 50vw
+  }
 }
