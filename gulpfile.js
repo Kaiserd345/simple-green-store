@@ -58,7 +58,7 @@ function styles() {
         .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.css
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
-        .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
+        .pipe(cleancss( { level: { 1: { specialComments: 0 } }, format: 'beautify' } )) // Минифицируем стили
         .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }

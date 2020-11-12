@@ -1,5 +1,146 @@
 @import "_var";
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1280px) {
+  .way {
+    &-container {
+      grid-template-columns: 1fr 1fr;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+
+    &-separator {
+      display: none;
+    }
+
+  }
+}
+
+@media only screen and (max-device-width: 960px) {
+  .way {
+    &-container {
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 670px) {
+  body {
+    font-size: 35px;
+  }
+
+  .company-logo {
+    width: 30%;
+  }
+
+  .header {
+    height: 8vh;
+    &-nav {
+      display: none;
+    }
+  }
+
+  .intro {
+    height: auto;
+    grid-template-columns: 1fr;
+
+    &:before {
+      background: @bg-brown;
+    }
+
+    &-logo {
+      width: 50%;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-vertical {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &-content {
+      padding-left: 0;
+    }
+
+    &-button {
+      width: 90%;
+    }
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    &-content {
+      grid-template-columns: 1fr;
+
+      .products-content-categories-button.is-active {
+        border-left: none;
+        border-bottom: 3px solid @green-accent;
+      }
+
+      &-categories {
+        align-items: center;
+        margin-bottom: 2em;
+      }
+
+      &-list {
+        display: flex;
+
+        &-item {
+          width: 80vw;
+
+          &-img {
+            height: 50vh;
+            width: 80vw;
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .way {
+    &-container {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+
+      &-img {
+        width: 50vw;
+        height: 50vw;
+        background-size: cover;
+      }
+
+      &-caption {
+        justify-self: center;
+        width: 50vw;
+      }
+    }
+  }
+
+  .stores {
+    &-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
 
 }

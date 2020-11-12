@@ -156,7 +156,7 @@ template {
 }
 body {
   font-family: Montserrat,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -171,10 +171,6 @@ body {
 .grid {
   display: -ms-grid;
   display: grid
-}
-.container {
-  width: 1080px;
-  margin: 0 auto
 }
 .button {
   display: block;
@@ -198,7 +194,7 @@ body {
   margin-bottom: 65px
 }
 .section-title {
-  font-size: 45px;
+  font-size: 3em;
   font-weight: 600;
   margin-bottom: 15px
 }
@@ -226,8 +222,8 @@ body {
   -o-transition: transform .4s linear;
   transition: transform .4s linear;
   transition: transform .4s linear,-webkit-transform .4s linear;
-  -webkit-transform: perspective(900px) rotateX(-11deg) scale(1.1);
-  transform: perspective(900px) rotateX(-11deg) scale(1.1)
+  -webkit-transform: perspective(900px) rotateX(-7deg) scale(1.1);
+  transform: perspective(900px) rotateX(-7deg) scale(1.1)
 }
 .company-logo {
   padding: 30px 15px 15px 15px;
@@ -284,7 +280,6 @@ body {
   color: #212121;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 15px;
   font-weight: 500;
   -webkit-transition: color ease .4s;
   -o-transition: color ease .4s;
@@ -298,7 +293,7 @@ body {
 }
 .intro {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   -ms-grid-columns: 1fr 2fr;
   grid-template-columns: 1fr 2fr
 }
@@ -308,25 +303,28 @@ body {
 .intro-content {
   position: relative;
   padding: 15px 0 0 calc(15px + 45px);
-  justify-items: center
+  height: 100%;
+  -ms-grid-rows: .7fr 2.3fr;
+  grid-template-rows: .7fr 2.3fr
 }
 .intro-logo {
   width: 50%;
   margin-top: 15px
 }
 .intro-title {
-  font-size: 64px;
+  font-size: 4em;
   line-height: 1.1;
   margin-top: 30px
 }
 .intro-text {
-  font-size: 20px
+  font-size: 1.5em
 }
 .intro-button {
   padding: 15px calc(15px + 20px);
-  margin-top: 45px;
-  max-width: 50%;
-  font-size: 20px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 80%;
+  font-size: 1.5em;
   font-weight: 600;
   color: #f6f4f4;
   background-color: #65b24e
@@ -343,7 +341,7 @@ body {
   position: relative;
   overflow: hidden;
   margin: 15px;
-  max-height: 480px;
+  height: 480px;
   border-radius: 15px
 }
 .about-image img {
@@ -362,11 +360,11 @@ body {
   grid-template-rows: .7fr 2.3fr
 }
 .products-text {
+  padding: 15px 30px;
+  text-align: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  padding: 15px 30px;
-  text-align: center
+  align-items: center
 }
 .products-content {
   -ms-grid-columns: .7fr 2.3fr;
@@ -406,9 +404,8 @@ body {
   max-width: 90%;
   cursor: pointer;
   vertical-align: middle;
-  height: 50px;
+  height: 3em;
   text-align: left;
-  font-size: 16px;
   outline: 0;
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
@@ -453,7 +450,7 @@ body {
 .brands-text {
   text-align: center;
   color: #f6f4f4;
-  font-size: 22px
+  font-size: 1.5em
 }
 .brands:before {
   content: '';
@@ -500,16 +497,19 @@ body {
   padding: 15px 30px
 }
 .stores-text-sub-title {
-  font-size: 24px;
+  font-size: 1.6em;
   margin-bottom: 15px
+}
+.stores-text ul {
+  list-style: none;
+  padding-left: 0
 }
 .stores-text-tel {
   display: inline-block;
   font-size: 1.2em;
   color: #65b24e;
   text-decoration: none;
-  cursor: pointer;
-  padding-left: 15px
+  cursor: pointer
 }
 .stores-text-tel:hover {
   color: #5da447
@@ -534,7 +534,9 @@ body {
   position: relative;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4,1fr);
-  grid-gap: 30px
+  grid-gap: 30px;
+  width: 992px;
+  margin: 0 auto
 }
 .way-container:before {
   content: "";
@@ -556,7 +558,7 @@ body {
   width: 80px;
   color: #65b24e;
   font-family: "Font Awesome 5 Free";
-  font-size: 30px
+  font-size: 2em
 }
 .way-item-img {
   -ms-grid-column-align: center;
@@ -594,13 +596,14 @@ body {
   padding: 15px 0
 }
 .social-links-list {
-  list-style: none
+  list-style: none;
+  padding-left: 0
 }
 .social-links-list-item {
   display: inline-block
 }
 .social-links-list-item a {
-  font-size: 22px;
+  font-size: 1.5em;
   color: #212121;
   text-decoration: none;
   padding: 8px;
@@ -608,4 +611,121 @@ body {
 }
 .social-links-list-item a:hover {
   color: #545454
+}
+@media only screen and (max-width:1280px) {
+  .way-container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr
+  }
+  .way-container:after,
+  .way-container:before {
+    display: none
+  }
+  .way-separator {
+    display: none
+  }
+}
+@media only screen and (max-device-width:960px) {
+  .way-container {
+    width: auto
+  }
+}
+@media only screen and (max-device-width:670px) {
+  body {
+    font-size: 35px
+  }
+  .company-logo {
+    width: 30%
+  }
+  .header {
+    height: 8vh
+  }
+  .header-nav {
+    display: none
+  }
+  .intro {
+    height: auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr
+  }
+  .intro:before {
+    background: #fde9d4
+  }
+  .intro-logo {
+    width: 50%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center
+  }
+  .intro-vertical {
+    width: 80%;
+    margin: 0 auto
+  }
+  .intro-content {
+    padding-left: 0
+  }
+  .intro-button {
+    width: 90%
+  }
+  .about {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr
+  }
+  .products-content {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr
+  }
+  .products-content .products-content-categories-button.is-active {
+    border-left: none;
+    border-bottom: 3px solid #65b24e
+  }
+  .products-content-categories {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 2em
+  }
+  .products-content-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+  .products-content-list-item {
+    width: 80vw
+  }
+  .products-content-list-item-img {
+    height: 50vh;
+    width: 80vw
+  }
+  .products-content-list-item-img img {
+    height: auto;
+    width: 100%
+  }
+  .way-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr
+  }
+  .way-item-img {
+    width: 50vw;
+    height: 50vw;
+    background-size: cover
+  }
+  .way-item-caption {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    width: 50vw
+  }
+  .stores-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    text-align: center
+  }
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+  }
 }
