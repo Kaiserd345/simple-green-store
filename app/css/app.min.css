@@ -634,6 +634,15 @@ body {
   body {
     font-size: 35px
   }
+  .company-logo {
+    width: 30%
+  }
+  .header {
+    height: 8vh
+  }
+  .header-nav {
+    display: none
+  }
   .intro {
     height: auto;
     -ms-grid-columns: 1fr;
@@ -718,8 +727,5 @@ body {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse
-  }
-  .footer-container .company-logo {
-    width: 30%
   }
 }
