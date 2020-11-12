@@ -500,13 +500,16 @@ body {
   font-size: 1.6em;
   margin-bottom: 15px
 }
+.stores-text ul {
+  list-style: none;
+  padding-left: 0
+}
 .stores-text-tel {
   display: inline-block;
   font-size: 1.2em;
   color: #65b24e;
   text-decoration: none;
-  cursor: pointer;
-  padding-left: 15px
+  cursor: pointer
 }
 .stores-text-tel:hover {
   color: #5da447
@@ -593,7 +596,8 @@ body {
   padding: 15px 0
 }
 .social-links-list {
-  list-style: none
+  list-style: none;
+  padding-left: 0
 }
 .social-links-list-item {
   display: inline-block
@@ -703,5 +707,19 @@ body {
     -ms-grid-column-align: center;
     justify-self: center;
     width: 50vw
+  }
+  .stores-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    text-align: center
+  }
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+  }
+  .footer-container .company-logo {
+    width: 30%
   }
 }

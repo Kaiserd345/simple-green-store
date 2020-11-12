@@ -169,6 +169,7 @@ body {
     width: 50%;
     margin-top: @gutter;
   }
+
   &-title {
     font-size: 4em;
     line-height: 1.1;
@@ -376,13 +377,18 @@ body {
       margin-bottom: @gutter;
     }
 
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
     &-tel {
       display: inline-block;
       font-size: 1.2em;
       color: @green-accent;
       text-decoration: none;
       cursor: pointer;
-      padding-left: @gutter;
+
 
       &:hover {
         color: darken(@green-accent, 4%);
@@ -481,6 +487,7 @@ body {
 .social-links {
   &-list {
     list-style: none;
+    padding-left: 0;
 
     &-item {
       display: inline-block;
