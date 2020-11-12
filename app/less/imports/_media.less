@@ -33,21 +33,26 @@
   .intro {
     height: auto;
     grid-template-columns: 1fr;
+
     &:before {
       background: @bg-brown;
     }
+
     &-logo {
       width: 50%;
       align-self: center;
       justify-self: center;
     }
+
     &-vertical {
       width: 80%;
       margin: 0 auto;
     }
+
     &-content {
       padding-left: 0;
     }
+
     &-button {
       width: 90%;
     }
@@ -55,6 +60,39 @@
 
   .about {
     grid-template-columns: 1fr;
+  }
+
+  .products {
+    &-content {
+      grid-template-columns: 1fr;
+
+      .products-content-categories-button.is-active {
+        border-left: none;
+        border-bottom: 3px solid @green-accent;
+      }
+
+      &-categories {
+        align-items: center;
+        margin-bottom: 2em;
+      }
+
+      &-list {
+        display: flex;
+        &-item {
+          width: 80vw;
+          &-img {
+            height: 50vh;
+            width: 80vw;
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+
+      }
+    }
+
   }
 }
 
