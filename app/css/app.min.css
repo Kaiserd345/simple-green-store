@@ -159,6 +159,7 @@ body {
   font-size: 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
   margin: 0;
   padding: 0;
   line-height: 1.5
@@ -171,6 +172,28 @@ body {
 .grid {
   display: -ms-grid;
   display: grid
+}
+.side-button {
+  position: fixed;
+  right: .5em;
+  bottom: 1em;
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  font-size: 25px;
+  line-height: 55px;
+  color: #212121;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #faf3ee;
+  z-index: 5;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease
+}
+.side-button:hover {
+  background-color: #212121;
+  color: #faf3ee
 }
 .button {
   display: block;
@@ -592,7 +615,7 @@ body {
 }
 .footer-rights {
   text-align: center;
-  background-color: #000;
+  background-color: #212121;
   padding: 15px 0
 }
 .social-links-list {
