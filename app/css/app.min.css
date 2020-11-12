@@ -194,7 +194,7 @@ body {
   margin-bottom: 65px
 }
 .section-title {
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: 600;
   margin-bottom: 15px
 }
@@ -312,7 +312,7 @@ body {
   margin-top: 15px
 }
 .intro-title {
-  font-size: 4rem;
+  font-size: 4em;
   line-height: 1.1;
   margin-top: 30px
 }
@@ -341,7 +341,7 @@ body {
   position: relative;
   overflow: hidden;
   margin: 15px;
-  max-height: 480px;
+  height: 480px;
   border-radius: 15px
 }
 .about-image img {
@@ -360,11 +360,11 @@ body {
   grid-template-rows: .7fr 2.3fr
 }
 .products-text {
+  padding: 15px 30px;
+  text-align: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  padding: 15px 30px;
-  text-align: center
+  align-items: center
 }
 .products-content {
   -ms-grid-columns: .7fr 2.3fr;
@@ -404,7 +404,7 @@ body {
   max-width: 90%;
   cursor: pointer;
   vertical-align: middle;
-  height: 50px;
+  height: 3em;
   text-align: left;
   outline: 0;
   -webkit-transition: color .5s ease;
@@ -639,16 +639,25 @@ body {
     background: #fde9d4
   }
   .intro-logo {
-    width: 30%
+    width: 50%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center
   }
   .intro-vertical {
     width: 80%;
     margin: 0 auto
   }
+  .intro-content {
+    padding-left: 0
+  }
+  .intro-button {
+    width: 90%
+  }
   .about {
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr
   }
 }
