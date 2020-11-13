@@ -54,4 +54,10 @@ $(document).ready(function() {
             })
         })
     }
+
+    //Modal window
+    const btnOpenModal = document.querySelector('.delivery-button');
+    const btnCloseModal = document.querySelector('.close-modal');
+    const modalWindow = document.querySelector('.modal');
+    const modalOverlay = document.querySelector('.overlay');
 })
