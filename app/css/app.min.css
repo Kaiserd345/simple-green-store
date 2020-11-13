@@ -630,7 +630,7 @@ body {
   font-size: 1.5em;
   color: #212121;
   text-decoration: none;
-  padding: 8px;
+  padding: .5em;
   cursor: pointer
 }
 .social-links-list-item a:hover {
@@ -641,7 +641,7 @@ body {
 }
 .modal {
   position: fixed;
-  top: 2em;
+  top: 5vh;
   left: 50%;
   -webkit-transform: translate(-50%,0);
   -ms-transform: translate(-50%,0);
@@ -653,11 +653,31 @@ body {
   transition: transform .4s ease;
   transition: transform .4s ease,-webkit-transform .4s ease;
   background-color: #fff;
-  padding: 6rem;
+  padding: 8rem 6rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 3rem 5rem rgba(0,0,0,.3);
   box-shadow: 0 3rem 5rem rgba(0,0,0,.3);
   z-index: 10
+}
+.modal-content {
+  max-height: 90vh;
+  overflow-y: scroll
+}
+.modal-social {
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+  font-size: 1.5rem
+}
+.modal .close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: 0 0
 }
 .overlay {
   position: absolute;
@@ -670,15 +690,23 @@ body {
   backdrop-filter: blur(3px);
   z-index: 5
 }
-.close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: 0 0
+.viber a {
+  color: #665cac
+}
+.viber a:hover {
+  color: #51488d
+}
+.telegram a {
+  color: #08c
+}
+.telegram a:hover {
+  color: #069
+}
+.whatsapp a {
+  color: #4ac959
+}
+.whatsapp a:hover {
+  color: #33ad42
 }
 @media only screen and (max-width:1280px) {
   .way-container {

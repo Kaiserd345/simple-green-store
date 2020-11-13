@@ -39,6 +39,7 @@ body {
   background-color: @bg-light;
   z-index: 5;
   transition: all .4s ease;
+
   &:hover {
     background-color: @text-black;
     color: @bg-light;
@@ -518,7 +519,7 @@ body {
         font-size: 1.5em;
         color: @text-black;
         text-decoration: none;
-        padding: 8px;
+        padding: 0.5em;
         cursor: pointer;
 
         &:hover {
@@ -536,16 +537,39 @@ body {
 
 .modal {
   position: fixed;
-  top: 2em;
+  top: 5vh;
   left: 50%;
   transform: translate(-50%, 0);
   width: 70%;
   transition: transform .4s ease;
   background-color: white;
-  padding: 6rem;
+  padding: 8rem 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+
+  &-content {
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
+
+  &-social {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 4rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
 }
 
 .overlay {
@@ -559,15 +583,32 @@ body {
   z-index: 5;
 }
 
-.close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
+.viber {
+  a {
+    color: @brand-viber;
+    &:hover {
+      color: darken(@brand-viber, 10%);
+    }
+  }
 }
+
+.telegram {
+  a {
+    color: @brand-telegram;
+    &:hover {
+      color: darken(@brand-telegram, 10%);
+    }
+  }
+}
+
+.whatsapp {
+  a {
+    color: @brand-whatsapp;
+    &:hover {
+      color: darken(@brand-whatsapp, 10%);
+    }
+  }
+}
+
 
 @import "imports/_media";
