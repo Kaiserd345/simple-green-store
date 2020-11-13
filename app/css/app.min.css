@@ -641,7 +641,7 @@ body {
 }
 .modal {
   position: fixed;
-  top: 15vh;
+  top: 2em;
   left: 50%;
   -webkit-transform: translate(-50%,0);
   -ms-transform: translate(-50%,0);
