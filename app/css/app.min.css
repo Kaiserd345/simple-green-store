@@ -175,25 +175,29 @@ body {
 }
 .side-button {
   position: fixed;
-  right: .5em;
+  right: 1em;
   bottom: 1em;
   width: 55px;
   height: 55px;
-  padding: 5px;
-  font-size: 25px;
+  padding: 5px 5px 3px 5px;
+  font-size: 30px;
   line-height: 55px;
-  color: #212121;
+  color: #f6f4f4;
   text-align: center;
   border-radius: 50%;
-  background-color: #faf3ee;
+  background: -o-radial-gradient(30% 107%,circle,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);
+  background: radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
   z-index: 5;
   -webkit-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease
 }
 .side-button:hover {
-  background-color: #212121;
-  color: #faf3ee
+  -webkit-transform: scale(.9);
+  -ms-transform: scale(.9);
+  transform: scale(.9)
 }
 .button {
   display: block;
