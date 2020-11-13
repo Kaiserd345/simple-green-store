@@ -60,4 +60,21 @@ $(document).ready(function() {
     const btnCloseModal = document.querySelector('.close-modal');
     const modalWindow = document.querySelector('.modal');
     const modalOverlay = document.querySelector('.overlay');
+    const header = document.querySelector('.header');
+
+    const openModal = function () {
+        modalWindow.classList.remove('hidden');
+        modalOverlay.classList.remove('hidden');
+        header.classList.add('hidden');
+    }
+
+    const closeModal = function () {
+        modalWindow.classList.add('hidden');
+        modalOverlay.classList.add('hidden');
+        header.classList.remove('hidden');
+    }
+
+    btnOpenModal.addEventListener('click', openModal);
+    btnCloseModal.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
 })
