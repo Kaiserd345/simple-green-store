@@ -384,11 +384,13 @@ body {
 //Stores Map Section
 .stores {
   &-container {
+    position: relative;
     grid-template-columns: 1fr 1fr;
   }
 
   &-map {
-    margin: @gutter;
+    align-self: center;
+    margin: 0 @gutter;
   }
 
   &-text {

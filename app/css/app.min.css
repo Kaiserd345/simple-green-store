@@ -512,11 +512,15 @@ body {
   filter: brightness(0) invert(1)
 }
 .stores-container {
+  position: relative;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr
 }
 .stores-map {
-  margin: 15px
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin: 0 15px
 }
 .stores-text {
   -webkit-box-align: center;
