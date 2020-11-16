@@ -2,6 +2,7 @@
 $(document).ready(function () {
 
     window.onscroll = () => stickyHeader();
+
     tabToggle();
     scrollToLink();
     modalWindow();
