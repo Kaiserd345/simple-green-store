@@ -15,6 +15,73 @@ body {
   line-height: 1.5;
 }
 
+//Preloader
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: @bg-light;
+  z-index: 10;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: @green-accent;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 //Uniq Styles
 .flex {
   display: flex;
@@ -37,7 +104,7 @@ body {
   text-align: center;
   border-radius: 50%;
   background: @grd-insta;
-  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
   z-index: 5;
   transition: all .4s ease;
 
@@ -588,6 +655,7 @@ body {
 .viber {
   a {
     color: @brand-viber;
+
     &:hover {
       color: darken(@brand-viber, 10%);
     }
@@ -597,6 +665,7 @@ body {
 .telegram {
   a {
     color: @brand-telegram;
+
     &:hover {
       color: darken(@brand-telegram, 10%);
     }
@@ -606,6 +675,7 @@ body {
 .whatsapp {
   a {
     color: @brand-whatsapp;
+
     &:hover {
       color: darken(@brand-whatsapp, 10%);
     }
