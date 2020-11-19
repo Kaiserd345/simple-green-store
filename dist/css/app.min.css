@@ -173,7 +173,7 @@ body {
   background: #faf3ee;
   z-index: 10
 }
-.preloader-row {
+.preloader__row {
   position: relative;
   top: 50%;
   left: 50%;
@@ -185,7 +185,7 @@ body {
   -webkit-animation: preloader-rotate 2s infinite linear;
   animation: preloader-rotate 2s infinite linear
 }
-.preloader-item {
+.preloader__item {
   position: absolute;
   display: inline-block;
   top: 0;
@@ -196,7 +196,7 @@ body {
   -webkit-animation: preloader-bounce 2s infinite ease-in-out;
   animation: preloader-bounce 2s infinite ease-in-out
 }
-.preloader-item:last-child {
+.preloader__item:last-child {
   top: auto;
   bottom: 0;
   -webkit-animation-delay: -1s;
@@ -236,7 +236,7 @@ body {
     transform: scale(1)
   }
 }
-.loaded-hiding .preloader {
+.loaded_hiding .preloader {
   -webkit-transition: .3s opacity;
   -o-transition: .3s opacity;
   transition: .3s opacity;
@@ -261,7 +261,7 @@ body {
   width: 55px;
   height: 55px;
   padding: 5px 5px 3px 5px;
-  font-size: 1.5em;
+  font-size: 30px;
   line-height: 55px;
   color: #f6f4f4;
   text-align: center;
@@ -401,7 +401,7 @@ body {
 }
 .intro {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   -ms-grid-columns: 1fr 2fr;
   grid-template-columns: 1fr 2fr
 }
@@ -819,12 +819,6 @@ body {
   body {
     font-size: 35px
   }
-  .side-button {
-    height: 3em;
-    width: 3em;
-    font-size: 1.5em;
-    line-height: 3em
-  }
   .company-logo {
     width: 30%
   }
@@ -837,11 +831,10 @@ body {
   .intro {
     height: auto;
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    background: #fde9d4
+    grid-template-columns: 1fr
   }
   .intro:before {
-    display: none
+    background: #fde9d4
   }
   .intro-logo {
     width: 50%;

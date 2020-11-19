@@ -1,10 +1,10 @@
 "use strict"
 
 window.onload = function () {
-    document.body.classList.add('loaded_hiding');
+    document.body.classList.add('loaded-hiding');
     window.setTimeout(function () {
         document.body.classList.add('loaded');
-        document.body.classList.remove('loaded_hiding');
+        document.body.classList.remove('loaded-hiding');
     }, 5000);
 }
 

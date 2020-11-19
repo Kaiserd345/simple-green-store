@@ -30,6 +30,13 @@
     font-size: 35px;
   }
 
+  .side-button {
+    height: 3em;
+    width: 3em;
+    font-size: 1.5em;
+    line-height: 3em;
+  }
+
   .company-logo {
     width: 30%;
   }
@@ -44,9 +51,10 @@
   .intro {
     height: auto;
     grid-template-columns: 1fr;
+    background: @bg-brown;
 
     &:before {
-      background: @bg-brown;
+      display: none;
     }
 
     &-logo {

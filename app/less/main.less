@@ -26,7 +26,7 @@ body {
   z-index: 10;
 }
 
-.preloader__row {
+.preloader-row {
   position: relative;
   top: 50%;
   left: 50%;
@@ -38,7 +38,7 @@ body {
   animation: preloader-rotate 2s infinite linear;
 }
 
-.preloader__item {
+.preloader-item {
   position: absolute;
   display: inline-block;
   top: 0;
@@ -49,7 +49,7 @@ body {
   animation: preloader-bounce 2s infinite ease-in-out;
 }
 
-.preloader__item:last-child {
+.preloader-item:last-child {
   top: auto;
   bottom: 0;
   animation-delay: -1s;
@@ -73,7 +73,7 @@ body {
   }
 }
 
-.loaded_hiding .preloader {
+.loaded-hiding .preloader {
   transition: 0.3s opacity;
   opacity: 0;
 }
@@ -98,7 +98,7 @@ body {
   width: 55px;
   height: 55px;
   padding: 5px 5px 3px 5px;
-  font-size: 30px;
+  font-size: 1.5em;
   line-height: 55px;
   color: @text-light;
   text-align: center;
@@ -239,7 +239,7 @@ body {
 //Section intro
 .intro {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-columns: 1fr 2fr;
 
   &:before {
