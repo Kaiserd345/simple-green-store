@@ -797,6 +797,34 @@ body {
 .whatsapp a:hover {
   color: #33ad42
 }
+.page404 {
+  max-width: 70%;
+  margin: 20vh auto;
+  text-align: center
+}
+.page404-title {
+  font-size: 2.7rem;
+  color: #65b24e
+}
+.page404-title strong {
+  color: #212121;
+  font-size: 5rem
+}
+.page404-text {
+  font-size: 1.5rem
+}
+.page404-button {
+  color: #65b24e;
+  border: 2px solid #65b24e;
+  font-size: 1.2rem;
+  width: 50%;
+  margin: 0 auto
+}
+.page404-button:active,
+.page404-button:hover {
+  background-color: #65b24e;
+  color: #f6f4f4
+}
 @media only screen and (max-width:1280px) {
   .way-container {
     -ms-grid-columns: 1fr 1fr;
