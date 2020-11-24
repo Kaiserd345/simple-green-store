@@ -23,6 +23,24 @@
       width: auto;
     }
   }
+
+  .stores {
+    &-text {
+      text-align: left;
+
+      &-container {
+        justify-content: space-around;
+      }
+
+      ul {
+        display: list-item;
+      }
+
+      &-tel {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 @media only screen and (max-device-width: 670px) {
@@ -49,7 +67,7 @@
   }
 
   .header {
-    height: 8vh;
+    min-height: 150px;
 
     &-nav {
       display: none;
@@ -162,9 +180,6 @@
       text-align: center;
     }
 
-    &-text {
-      text-align: left;
-    }
   }
 
   .footer-container {

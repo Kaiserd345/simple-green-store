@@ -187,10 +187,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: -12vh;
+  top: -200px;
   left: 0;
   width: 100vw;
-  height: 8vh;
+  height: 150px;
   background-color: @bg-light;
   box-shadow: 0 1px 5px 0 rgba(82, 82, 82, 1);
   transition: top .3s ease;
@@ -461,29 +461,40 @@ body {
     align-items: center;
     padding: @gutter @gutter-dbl;
 
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     &-sub-title {
       font-size: 1.6em;
       margin-bottom: @gutter;
     }
 
     ul {
+      display: flex;
       list-style: none;
       padding-left: 0;
     }
 
     &-tel {
       display: inline-block;
+      margin-left: @gutter;
       font-size: 1.2em;
       color: @green-accent;
       text-decoration: none;
       cursor: pointer;
-
 
       &:hover {
         color: darken(@green-accent, 4%);
       }
     }
   }
+
+  //&-social {
+  //  margin-left: @gutter-dbl;
+  //}
 }
 
 //Product Way section

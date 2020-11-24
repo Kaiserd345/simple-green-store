@@ -5,7 +5,7 @@ window.onload = function () {
     window.setTimeout(function () {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded-hiding');
-    }, 5000);
+    }, 300);
 }
 
 $(document).ready(function () {
