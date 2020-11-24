@@ -718,6 +718,14 @@ body {
   align-items: center;
   width: 100%
 }
+.footer-email {
+  color: #212121;
+  font-weight: 600;
+  text-decoration: none
+}
+.footer-email:hover {
+  color: #3b3b3b
+}
 .footer-rights {
   text-align: center;
   background-color: #212121;
