@@ -358,10 +358,10 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  top: -12vh;
+  top: -200px;
   left: 0;
   width: 100vw;
-  height: 8vh;
+  height: 150px;
   background-color: #faf3ee;
   -webkit-box-shadow: 0 1px 5px 0 #525252;
   box-shadow: 0 1px 5px 0 #525252;
@@ -603,22 +603,42 @@ body {
   align-self: center;
   margin: 0 15px
 }
+.stores-map-frame {
+  width: 100%;
+  height: 650px;
+  border: none
+}
 .stores-text {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding: 15px 30px
 }
+.stores-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
 .stores-text-sub-title {
   font-size: 1.6em;
   margin-bottom: 15px
 }
 .stores-text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   list-style: none;
   padding-left: 0
 }
 .stores-text-tel {
   display: inline-block;
+  margin-left: 15px;
   font-size: 1.2em;
   color: #65b24e;
   text-decoration: none;
@@ -702,6 +722,14 @@ body {
   -ms-flex-align: center;
   align-items: center;
   width: 100%
+}
+.footer-email {
+  color: #212121;
+  font-weight: 600;
+  text-decoration: none
+}
+.footer-email:hover {
+  color: #3b3b3b
 }
 .footer-rights {
   text-align: center;
@@ -797,6 +825,34 @@ body {
 .whatsapp a:hover {
   color: #33ad42
 }
+.page404 {
+  max-width: 70%;
+  margin: 20vh auto;
+  text-align: center
+}
+.page404-title {
+  font-size: 2.7rem;
+  color: #65b24e
+}
+.page404-title strong {
+  color: #212121;
+  font-size: 5rem
+}
+.page404-text {
+  font-size: 1.5rem
+}
+.page404-button {
+  color: #65b24e;
+  border: 2px solid #65b24e;
+  font-size: 1.2rem;
+  width: 50%;
+  margin: 0 auto
+}
+.page404-button:active,
+.page404-button:hover {
+  background-color: #65b24e;
+  color: #f6f4f4
+}
 @media only screen and (max-width:1280px) {
   .way-container {
     -ms-grid-columns: 1fr 1fr;
@@ -814,6 +870,19 @@ body {
   .way-container {
     width: auto
   }
+  .stores-text {
+    text-align: left
+  }
+  .stores-text-container {
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+  }
+  .stores-text ul {
+    display: list-item
+  }
+  .stores-text-tel {
+    margin-left: 0
+  }
 }
 @media only screen and (max-device-width:670px) {
   body {
@@ -828,8 +897,14 @@ body {
   .company-logo {
     width: 30%
   }
+  .section-title {
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 30px;
+    line-height: 1.2
+  }
   .header {
-    height: 8vh
+    min-height: 150px
   }
   .header-nav {
     display: none
@@ -865,6 +940,10 @@ body {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr
   }
+  .products-paragraph {
+    text-align: left;
+    margin-left: 15px
+  }
   .products-content {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr
@@ -888,12 +967,15 @@ body {
     width: 80vw
   }
   .products-content-list-item-img {
-    height: 50vh;
+    min-height: 50vh;
     width: 80vw
   }
   .products-content-list-item-img img {
     height: auto;
     width: 100%
+  }
+  .brands-title {
+    text-align: center
   }
   .way-container {
     -ms-grid-columns: 1fr;
