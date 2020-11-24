@@ -120,6 +120,8 @@ exports.images = images;
 // Экспортируем функцию cleanimg() как таск cleanimg
 exports.cleanimg = cleanimg;
 
+exports.cleandist = cleandist;
+
 // Создаём новый таск "build", который последовательно выполняет нужные операции (series - последовательное виполнение)
 exports.build = series(styles, scripts, images, buildcopy);
 
